@@ -2,24 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../../hooks/useTheme';
 import { Play, Pause, Mail, ArrowRight, Menu, ChevronDown, Sun, Moon, ShieldAlert } from 'lucide-react';
 
-interface NavbarHeroProps {
-  brandName?: string;
-  heroTitle?: string;
-  heroSubtitle?: string;
-  heroDescription?: string;
-  backgroundImage?: string;
-  videoUrl?: string;
-  emailPlaceholder?: string;
-}
-
-const NavbarHero: React.FC<NavbarHeroProps> = ({
+const NavbarHero = ({
   brandName = "CRIMEWATCH",
-  heroTitle = "Real-Time Neighborhood Safety Analytics",
-  heroSubtitle = "Stay Informed, Stay Safe",
-  heroDescription = "Empowering communities with precise, data-driven crime visualization and dynamic hotspot tracking for a safer tomorrow.",
-  backgroundImage = "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-  emailPlaceholder = "Enter your zip code or email"
+  heroTitle = "Global Vigilance, Local Safety",
+  heroSubtitle = "Empowering Communities",
+  heroDescription = "Access real-time crime analytics and neighborhood safety insights. Join the movement to make our streets safer through data.",
+  backgroundImage = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80", // Earth from space at night
+  videoUrl = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  emailPlaceholder = "Enter your city or zip code"
 }) => {
   const [email, setEmail] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -115,7 +105,7 @@ const NavbarHero: React.FC<NavbarHeroProps> = ({
             <div className="hidden lg:flex items-center gap-3">
               <a href="#" className="text-foreground hover:text-muted-foreground cursor-pointer py-2 px-4 text-sm capitalize font-medium transition-colors rounded-xl">Login</a>
               <button className="bg-foreground hover:bg-muted-foreground text-background py-2.5 px-5 text-sm rounded-xl capitalize font-medium transition-colors flex items-center gap-2">
-                Launch App<ArrowRight className="h-4 w-4" />
+                Start Surveying<ArrowRight className="h-4 w-4" />
               </button>
             </div>
             <ThemeToggleButton />
@@ -158,7 +148,7 @@ const NavbarHero: React.FC<NavbarHeroProps> = ({
                 <input type="text" placeholder={emailPlaceholder} value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-muted border-border text-foreground placeholder-muted-foreground font-medium pl-12 pr-4 py-3 text-base rounded-full focus:outline-none focus:ring-2 focus:ring-red-500 border" />
               </div>
               <button onClick={handleEmailSubmit} className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 text-base rounded-full normal-case font-bold transition-colors flex items-center gap-2 shadow-lg shadow-red-500/20">
-                Get Started<ArrowRight className="h-5 w-5" />
+                Start Surveying<ArrowRight className="h-5 w-5" />
               </button>
             </div>
           </div>

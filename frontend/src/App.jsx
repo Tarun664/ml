@@ -5,9 +5,11 @@ import FilterBar from './components/FilterBar';
 import HotspotPanel from './components/HotspotPanel';
 import TrendCharts from './components/TrendCharts';
 import SafetyPanel from './components/SafetyPanel';
+import { NavbarHero } from './components/ui/hero-with-video';
 import './App.css';
 
 export default function App() {
+  const [showDashboard, setShowDashboard] = useState(false);
 
   const [region, setRegion]                 = useState('india');
   const [filters, setFilters]               = useState({ cities: [], crime_types: [] });
@@ -61,6 +63,19 @@ export default function App() {
   };
 
   const handleAnalyze = () => analyze(config);
+
+  if (!showDashboard) {
+    return (
+      <div onClick={(e) => {
+        const target = e.target;
+        if (target.textContent?.includes('Start Surveying')) {
+          setShowDashboard(true);
+        }
+      }}>
+        <NavbarHero />
+      </div>
+    );
+  }
 
   return (
     <div className="app-shell">

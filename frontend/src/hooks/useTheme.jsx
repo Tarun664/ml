@@ -23,7 +23,7 @@ export function useTheme() {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const setTheme = (newTheme: string) => {
+  const setTheme = (newTheme) => {
     setThemeState(newTheme);
   };
 
