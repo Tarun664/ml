@@ -13,10 +13,10 @@ const NavbarHero = ({
 }) => {
   const [email, setEmail] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isVideoPaused, setIsVideoPaused] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -28,7 +28,7 @@ const NavbarHero = ({
     console.log('Search/Email submitted:', email);
   };
 
-  const toggleDropdown = (dropdownName: string) => {
+  const toggleDropdown = (dropdownName) => {
     setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
   };
 
