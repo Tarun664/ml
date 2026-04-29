@@ -1,0 +1,3 @@
+# Drop india_crimes.csv here to override synthetic data.
+# Required columns: latitude, longitude, crime_type, city, date
+# Optional columns: state, arrested

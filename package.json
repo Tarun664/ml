@@ -1,0 +1,16 @@
+{
+  "name": "crimewatch-monorepo",
+  "version": "1.0.0",
+  "description": "Root directory for CrimeWatch dashboard",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm start --prefix frontend",
+    "dev:backend": "cd backend && venv\\Scripts\\python app.py",
+    "install:frontend": "npm install --prefix frontend",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

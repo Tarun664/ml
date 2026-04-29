@@ -1,0 +1,46 @@
+{
+  "name": "crimewatch-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "axios": "^1.7.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.14.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.12.7",
+    "tailwind-merge": "^3.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "proxy": "http://127.0.0.1:5000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.12",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3"
+  }
+}

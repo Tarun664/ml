@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="CRIMEWATCH — India Crime Pattern Analysis Engine. ML-powered heatmaps, clustering, and trend analytics." />
+    <title>CRIMEWATCH — India Crime Pattern Analysis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Leaflet JS (loaded before React bundle for window.L access) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Heat Plugin -->
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+    <style>
+      /* Critical above-the-fold reset */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body, #root { height: 100%; width: 100%; overflow: hidden; background: #000; }
+    </style>
+  </head>
+  <body>
+    <noscript>CRIMEWATCH requires JavaScript to run.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
