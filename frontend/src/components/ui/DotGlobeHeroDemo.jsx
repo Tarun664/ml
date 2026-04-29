@@ -3,17 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { DotGlobeHero } from "./globe-hero";
-import { ArrowRight, ShieldAlert } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 
 export default function DotGlobeHeroDemo({ onStartSurveying }) {
   return (
     <DotGlobeHero
       rotationSpeed={0.004}
-      className="bg-gradient-to-br from-background via-background/95 to-red-950/10 relative overflow-hidden"
+      className="bg-gradient-to-br from-background via-background/95 to-muted/10 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/30" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-red-500/3 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/3 rounded-full blur-3xl animate-pulse" />
       
       <div className="relative z-10 text-center space-y-12 max-w-5xl mx-auto px-6 py-12">
         <motion.div
@@ -26,12 +26,12 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-red-500/20 via-red-500/10 to-red-500/20 border border-red-500/30 backdrop-blur-xl shadow-2xl"
+            className="relative inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border border-primary/30 backdrop-blur-xl shadow-2xl"
           >
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 animate-pulse" />
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-ping" />
-            <span className="relative z-10 text-sm font-bold text-red-500 tracking-wider uppercase">CRIMEWATCH NETWORK</span>
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-ping animation-delay-500" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 via-transparent to-primary/10 animate-pulse" />
+            <div className="w-2 h-2 bg-primary rounded-full animate-ping" />
+            <span className="relative z-10 text-sm font-bold text-primary tracking-wider uppercase">GLOBAL NETWORK</span>
+            <div className="w-2 h-2 bg-primary rounded-full animate-ping animation-delay-500" />
           </motion.div>
           
           <div className="space-y-6">
@@ -43,13 +43,13 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
               style={{ fontFamily: 'Inter, system-ui, sans-serif' }}
             >
               <span className="block font-light text-foreground/70 mb-3 text-4xl md:text-6xl lg:text-7xl">
-                Monitor
+                Connect
               </span>
               <span className="block relative">
-                <span className="bg-gradient-to-br from-red-500 via-red-500 to-red-500/60 bg-clip-text text-transparent font-black relative z-10">
+                <span className="bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent font-black relative z-10">
                   the World
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500 via-red-500 to-red-500/60 bg-clip-text text-transparent font-black blur-2xl opacity-50 scale-105" 
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/60 bg-clip-text text-transparent font-black blur-2xl opacity-50 scale-105" 
                      style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
                   the World
                 </div>
@@ -57,7 +57,7 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-                  className="absolute -bottom-6 left-0 h-3 bg-gradient-to-r from-red-500 via-red-500/80 to-transparent rounded-full shadow-lg shadow-red-500/50"
+                  className="absolute -bottom-6 left-0 h-3 bg-gradient-to-r from-primary via-primary/80 to-transparent rounded-full shadow-lg shadow-primary/50"
                 />
               </span>
             </motion.h1>
@@ -71,13 +71,13 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
           >
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium" 
                style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-              Experience real-time neighborhood safety with our{" "}
-              <span className="text-foreground font-semibold bg-gradient-to-r from-red-500/20 to-red-500/10 px-2 py-1 rounded-md">
-                advanced pattern analysis engine
+              Experience real-time global connectivity with our{" "}
+              <span className="text-foreground font-semibold bg-gradient-to-r from-primary/20 to-primary/10 px-2 py-1 rounded-md">
+                distributed network infrastructure
               </span>
             </p>
             <p className="text-lg text-muted-foreground/80 leading-relaxed">
-              Track hotspots, analyze trends, and secure your community with data-driven insights.
+              Monitor data flows, track performance, and scale across continents with unprecedented reliability.
             </p>
           </motion.div>
         </motion.div>
@@ -96,7 +96,7 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
               y: -2
             }}
             whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white rounded-xl font-semibold text-lg shadow-xl hover:shadow-red-500/30 transition-all duration-500 overflow-hidden border border-red-500/20"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground rounded-xl font-semibold text-lg shadow-xl hover:shadow-primary/30 transition-all duration-500 overflow-hidden border border-primary/20"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <motion.div
@@ -118,11 +118,11 @@ export default function DotGlobeHeroDemo({ onStartSurveying }) {
               y: -2
             }}
             whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-border/40 rounded-xl font-semibold text-lg hover:border-red-500/40 transition-all duration-500 backdrop-blur-xl bg-background/60 hover:bg-background/90 shadow-lg overflow-hidden"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-border/40 rounded-xl font-semibold text-lg hover:border-primary/40 transition-all duration-500 backdrop-blur-xl bg-background/60 hover:bg-background/90 shadow-lg overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 via-transparent to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <ShieldAlert className="relative z-10 w-5 h-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
-            <span className="relative z-10 tracking-wide">View Safety Metrics</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <Zap className="relative z-10 w-5 h-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
+            <span className="relative z-10 tracking-wide">View Live Demo</span>
           </motion.button>
         </motion.div>
       </div>
